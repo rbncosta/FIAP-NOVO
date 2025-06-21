@@ -27,7 +27,7 @@ Este projeto implementa um **Sistema de Irrigação Inteligente** completo que e
 ## Evolução do Projeto
 
 - **Fase 3 - Entrega 1:** Sistema de sensores e controle com ESP32
-- **Fase 3 - Entrega 2:** Sistema de armazenamento de dados em banco SQL
+- **Fase 3 - Entrega 2:** Sistema de armazenamento de dados em banco Oracle
 - **Fase 4:** Integração completa ESP32 + Oracle com preservação da estrutura existente
 
 ---
@@ -89,24 +89,6 @@ timestamp,fosforo,potassio,ph,umidade,bomba_status
 ## Descrição do Sistema
 
 Este sistema implementa a coleta de dados de sensores agrícolas que simula o armazenamento e manipulação de informações sobre culturas, sensores, medições, sugestões e aplicações em um banco de dados Oracle.
-
-## Estrutura do Projeto
-
-O projeto está organizado da seguinte forma:
-
-```
-Entrega-2/
-├── csv_data/                         # Arquivos CSV com dados de exemplo
-│   ├── t_culturas.csv                # Dados de culturas agrícolas
-│   ├── t_sensores.csv                # Dados de sensores
-│   ├── t_medicoes.csv                # Dados de medições
-│   ├── t_sugestoes.csv               # Dados de sugestões
-│   └── t_aplicacoes.csv              # Dados de aplicações
-├── Fase3_Cap1_Ent2_CRUD.py           # Classe principal para gerenciamento do banco de dados
-├── Modelo_Relacional.png             # Imagem do modelo relacional
-├── SCRIPT_DDL_PROJETO_FASE2_CAP1.SQL # Script DDL para criação das tabelas do projeto (banco Oracle)
-└── README.md                         # Este arquivo
-```
 
 ## Modelo Relacional
 
@@ -218,7 +200,7 @@ Para este projeto, optamos por uma estrutura de dados relacional implementada em
 1. **Robustez**: O Oracle é um SGBD de nível empresarial, capaz de lidar com grandes volumes de dados e operações complexas.
 2. **Confiabilidade**: Oferece recursos avançados de recuperação e alta disponibilidade, essenciais para dados críticos agrícolas.
 3. **Segurança**: Fornece mecanismos robustos de controle de acesso e proteção de dados.
-4. **Suporte completo a linguagem Transact-SQL**: Permite implementar todas as operações CRUD e consultas complexas necessárias.
+4. **Suporte completo a linguagem Transact-Oracle**: Permite implementar todas as operações CRUD e consultas complexas necessárias.
 5. **Integridade referencial**: Suporta chaves estrangeiras e restrições de integridade, essenciais para manter a consistência do modelo relacional.
 6. **Funções avançadas de data/hora**: Oferece funções como TO_DATE e TO_TIMESTAMP que facilitam o trabalho com dados temporais, importantes para registros de medições e aplicações.
 
@@ -233,7 +215,7 @@ A Fase 4 representa a **continuação e integração** das fases anteriores, imp
 ## Arquitetura Integrada
 
 ```
-┌─────────────────┐    CSV    ┌─────────────────┐    SQL    ┌─────────────────┐
+┌─────────────────┐    CSV    ┌─────────────────┐    Oracle    ┌─────────────────┐
 │   ESP32 + Wokwi │  ──────►  │  Sistema Python │  ──────►  │  Oracle Database│
 │                 │           │                 │           │   (Fase 3)      │
 │ • Sensores      │           │ • CRUD          │           │ • T_CULTURAS    │
@@ -351,21 +333,7 @@ pip install oracledb
 - Usuário: `RCOSTA` / Senha: `Rcosta@1980`
 - Tabelas da Fase 3 devem existir
 
-### 2. Estrutura do Projeto
-```
-farmtech_projeto/
-├── entrega1/
-│   ├── src/main.cpp
-│   ├── platformio.ini
-│   └── diagram.json
-├── entrega2/
-│   ├── farmtech_fase3_adaptado.py
-│   └── dados_exemplo.csv
-├── README.md
-└── INSTRUCOES_EXECUCAO.md
-```
-
-### 3. Verificação da Instalação
+### 2. Verificação da Instalação
 ```bash
 # Testar conexão Oracle
 python -c "import oracledb; print('Oracle DB OK')"
@@ -461,49 +429,13 @@ Escolher opção: 4
 
 # 🎬 Demonstração em Vídeo
 
-## Roteiro Sugerido (15-17 minutos)
+### Vídeo do CRUD
 
-### **Introdução (2 min)**
-- Apresentar evolução do projeto (Fase 3 → Fase 4)
-- Mostrar arquitetura completa
-- Explicar objetivos de integração
+![Assista à Demonstração do CRUD](./assets/Fase 4/WokWi_CRUD.mkv)
 
-### **Fase 3 - Entrega 1: ESP32 (3 min)**
-- Mostrar código C++ no VS Code
-- Executar simulação no Wokwi
-- Demonstrar sensores funcionando
-- Explicar lógica de controle
-- Copiar dados CSV do monitor
+### Vídeo do Modulo de Machine Learning
 
-### **Fase 3 - Entrega 2: Sistema CRUD (3 min)**
-- Mostrar estrutura do banco Oracle
-- Executar operações CRUD básicas
-- Demonstrar consultas analíticas
-- Mostrar integridade referencial
-
-### **Fase 4: Integração (6 min)**
-- Mostrar sistema Python adaptado
-- Demonstrar operações:
-  - Criar sensores ESP32 (opção 8)
-  - Importar CSV coletado (opção 2)
-  - Visualizar medições (opção 1)
-  - Mostrar estatísticas (opção 4)
-- Explicar preservação da estrutura Fase 3
-
-### **Resultados e Conclusão (3 min)**
-- Mostrar dados integrados no Oracle
-- Apresentar estatísticas geradas
-- Destacar continuidade entre fases
-- Conclusões e próximos passos
-
-## Pontos Importantes para o Vídeo
-
-✅ **Enfatizar evolução** das fases  
-✅ **Mostrar funcionamento real** dos sensores  
-✅ **Demonstrar lógica inteligente** de irrigação  
-✅ **Evidenciar integração** ESP32 ↔ Python ↔ Oracle  
-✅ **Destacar preservação** da estrutura existente  
-✅ **Apresentar resultados** práticos e estatísticas  
+![Assista à Demonstração de Machine Learning](./assets/Fase 4/Machine_Learning.mkv)
 
 ---
 
@@ -519,13 +451,13 @@ Escolher opção: 4
 - **C++** - Programação do ESP32
 - **Python 3.11** - Sistema de gestão
 - **Oracle Database** - Armazenamento de dados
-- **SQL** - Consultas e operações CRUD
+- **Oracle** - Consultas e operações CRUD
 
 ## Ferramentas de Desenvolvimento
 - **VS Code** - IDE principal
 - **PlatformIO** - Framework ESP32
 - **Wokwi** - Simulador de hardware
-- **Oracle SQL Developer** - Gestão do banco
+- **Oracle Oracle Developer** - Gestão do banco
 
 ## Bibliotecas e Dependências
 
