@@ -429,8 +429,8 @@ Escolher opção: 4
 
 # 🎬 Demonstração em Vídeo
 
-**[Assista à Demonstração do CRUD que está na pasta "assets" - WokWi_CRUD.mkv**
-**[Assista à Demonstração de Machine Learning que está na pasta "assets" - WokWi_CRUD.mkv**
+Assista à Demonstração do CRUD que está na pasta "assets" - WokWi_CRUD.mkv
+Assista à Demonstração de Machine Learning que está na pasta "assets" - WokWi_CRUD.mkv
 
 ---
 
