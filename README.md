@@ -431,12 +431,7 @@ Escolher opção: 4
 
 ### Vídeo do CRUD
 
-![Assista à Demonstração do CRUD](./assets/Fase 4/WokWi_CRUD.mkv)
 **[Assista à Demonstração do CRUD](./assets/Fase 4/WokWi_CRUD.mkv)**
-
-### Vídeo do Modulo de Machine Learning
-
-![Assista à Demonstração de Machine Learning](./assets/Fase 4/Machine_Learning.mkv)
 
 ---
 
