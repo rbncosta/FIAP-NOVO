@@ -1,0 +1,9 @@
+cod_medicao,cod_sugestao,cod_sensor,cod_cultura,cod_aplicacao,nm_produto_utilizado,valor_aplicacao,un_aplicacao,data_hora_aplicacao,nm_resp_aplicacao,documento_resp
+1,1,1,1,1,Irrigador Automático,20.00,MM,2025-05-01 09:00:00,João Silva,12345678901
+2,1,2,1,2,Calcário Agrícola,2.50,KG,2025-05-01 09:30:00,Maria Santos,23456789012
+5,1,5,3,3,Fertilizante NPK 10-10-10,3.20,KG,2025-05-01 10:00:00,Carlos Oliveira,34567890123
+7,1,7,4,4,Irrigador Automático,25.00,MM,2025-05-01 10:30:00,Ana Pereira,45678901234
+9,2,1,1,5,Irrigador Automático,15.00,MM,2025-05-01 11:00:00,João Silva,12345678901
+12,2,4,2,6,Irrigador Automático,10.00,MM,2025-05-01 11:30:00,Pedro Souza,56789012345
+13,2,5,3,7,Fertilizante NPK 10-10-10,2.80,KG,2025-05-01 12:00:00,Carlos Oliveira,34567890123
+15,2,7,4,8,Irrigador Automático,20.00,MM,2025-05-01 12:30:00,Ana Pereira,45678901234

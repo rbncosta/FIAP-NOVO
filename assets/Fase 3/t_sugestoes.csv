@@ -1,0 +1,17 @@
+cod_medicao,cod_sugestao,objetivo_sugestao,data_hora_sugestao,valor_sugestao,un_sugestao,cod_sensor
+1,1,Irrigação recomendada,2025-05-01 08:05:00,20.00,MM,1
+2,1,Aplicação de calcário,2025-05-01 08:20:00,2.50,KG,2
+3,1,Nenhuma ação necessária,2025-05-01 08:35:00,0.00,NA,3
+4,1,Irrigação recomendada,2025-05-01 08:50:00,15.00,MM,4
+5,1,Aplicação de NPK,2025-05-01 09:05:00,3.20,KG,5
+6,1,Nenhuma ação necessária,2025-05-01 09:20:00,0.00,NA,6
+7,1,Irrigação recomendada,2025-05-01 09:35:00,25.00,MM,7
+8,1,Aplicação de calcário,2025-05-01 09:50:00,1.80,KG,8
+9,2,Irrigação recomendada,2025-05-01 10:05:00,15.00,MM,1
+10,2,Nenhuma ação necessária,2025-05-01 10:20:00,0.00,NA,2
+11,2,Nenhuma ação necessária,2025-05-01 10:35:00,0.00,NA,3
+12,2,Irrigação recomendada,2025-05-01 10:50:00,10.00,MM,4
+13,2,Aplicação de NPK,2025-05-01 11:05:00,2.80,KG,5
+14,2,Nenhuma ação necessária,2025-05-01 11:20:00,0.00,NA,6
+15,2,Irrigação recomendada,2025-05-01 11:35:00,20.00,MM,7
+16,2,Nenhuma ação necessária,2025-05-01 11:50:00,0.00,NA,8
